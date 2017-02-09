@@ -483,7 +483,7 @@
 			zone = getZone(name),
 			out  = moment.utc.apply(null, args);
 
-		if (zone && !moment.isMoment(input) && needsOffset(out)) {
+		if (zone && !moment.isMoment(input)) {
 			out.add(zone.parse(out), 'minutes');
 		}
 
